@@ -1,35 +1,55 @@
 html {
-    background-color: rgb(135, 117, 165);
+    background-color: rgb(117, 104, 90);
 }
-section {
-    box-shadow: 0 0 10p;
+.page-section {
     background-color: white;
     border-radius: 20px;
+    box-shadow: 0 0 10px;
+    height: 40vh;
     margin: 20px auto;
     width: 90%;
-    height: 40vh;
 }
 
-#display-result {
-	width: calc(90% - 40px);
-	padding: 20px;
+/* Style the section that houses the text-editors*/
+#edit-boxes {
+	align-items: center;
+	display: flex;
+	justify-content: center;
 }
 
-div {
-    height: inherit;
-    width: 90%;
-    margin: 0 auto;
+#edit-boxes span{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 90%;
+	justify-content: center;
+	margin: 0 20px;
+	width: 40%;
 }
-textarea {
+
+
+.result-box #display-result {
+	padding: 0 60px;
+	width: calc(90% - 120px);
+}
+.result-box .live-results {
+	padding: 20px 0;
+	text-align: center;
+}
+
+.text-entry {
 	all: unset;
+	border-radius: 10px;
+	border: grey solid 2px;
+	height: 100%;
 	padding: 10px;
-    border: black solid;
-    text-align: left;
+	text-align: left;
+	transition: 
+		box-shadow 0.5s ease-out, 
+		background-color 0.5s ease-out;
+    width: 100%;
 }
-#write-html, #write-json {
-    width: 40%;
-    margin: 3%;
-    height: 80%;
+.text-entry:focus {
+	background-color: rgb(230, 248, 253);
+	box-shadow: 0 0 10px grey;
 }
-
-
