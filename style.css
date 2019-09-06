@@ -31,6 +31,7 @@ html {
 .result-box #display-result {
 	padding: 0 60px;
 	width: calc(90% - 120px);
+	overflow: scroll;
 }
 .result-box .live-results {
 	padding: 20px 0;
