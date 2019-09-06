@@ -31,7 +31,7 @@ html {
 .result-box #display-result {
 	padding: 0 60px;
 	width: calc(90% - 120px);
-	max-height: 80%;
+	max-height: 75%;
 	overflow: scroll;
 }
 .result-box .live-results {
