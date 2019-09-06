@@ -1,0 +1,35 @@
+html {
+    background-color: rgb(135, 117, 165);
+}
+section {
+    box-shadow: 0 0 10p;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px auto;
+    width: 90%;
+    height: 40vh;
+}
+
+#display-result {
+	width: calc(90% - 40px);
+	padding: 20px;
+}
+
+div {
+    height: inherit;
+    width: 90%;
+    margin: 0 auto;
+}
+textarea {
+	all: unset;
+	padding: 10px;
+    border: black solid;
+    text-align: left;
+}
+#write-html, #write-json {
+    width: 40%;
+    margin: 3%;
+    height: 80%;
+}
+
+
