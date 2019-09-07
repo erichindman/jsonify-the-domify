@@ -6,6 +6,11 @@ function manageEdits() {
 	const jsonBox = document.getElementById("write-json");
 	const htmlBox = document.getElementById("write-html");
 	const display = document.getElementById("display-result");
+	const shadowDoc = display.attachShadow({mode: 'open'});
+
+	htmlBox.value = '<h2>Edit me through the means given above!</h2><p>Edit the<em style="color: blue"> HTML </em>or the<em style="color: red"> JSON </em>output to see it represented in real time</p>';
+	shadowDoc.innerHTML = htmlBox.value;
+	jsonBox.value = JSON.stringify(domJSON(shadowDoc), null, "  ");
 
 	textareas.forEach(textarea => {
 		textarea.onkeydown = event => {
@@ -17,15 +22,15 @@ function manageEdits() {
 	});
 
 	htmlBox.oninput = event => {
-		display.innerHTML = htmlBox.value;
-		const jsonResult = domJSON(display);
+		shadowDoc.innerHTML = htmlBox.value;
+		const jsonResult = domJSON(shadowDoc);
 		jsonBox.value = JSON.stringify(jsonResult, null, "  ");
 	};
 
 	jsonBox.oninput = event => {
 		const json = JSON.parse(jsonBox.value);
-		jsonHTML(json, display);
-		htmlBox.value = display.innerHTML;
+		jsonHTML(json, shadowDoc);
+		htmlBox.value = shadowDoc.innerHTML;
 	};
 }
 
