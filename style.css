@@ -29,8 +29,8 @@ html {
 
 
 .result-box #display-result {
-	padding: 0 60px;
-	width: calc(90% - 120px);
+	margin: 0 auto ;
+	width: calc(90% - 45px);
 	max-height: 75%;
 	overflow: scroll;
 }
